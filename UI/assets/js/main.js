@@ -11,7 +11,14 @@ const signupValidation = (ev) => {
     if( phoneVal.length != 11) {
         console.log('your phone number should be 11 digits');
     }
+    passwordCheck();
     ev.preventDefault();
+}
+
+const passwordCheck = () => {
+    if(register.password.value !== register.confirmPassword.value) {
+        register.confirmPassword.setCustomValidity('Passwords do not match!');
+    }
 }
 
 submitBtn.addEventListener('click', signupValidation);
