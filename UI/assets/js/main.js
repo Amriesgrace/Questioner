@@ -17,7 +17,7 @@ const signupValidation = (ev) => {
 
 const passwordCheck = () => {
     if(register.password.value !== register.confirmPassword.value) {
-        alert('passwords do not match');
+        register.confirmPassword.setCustomValidity('Passwords do not match!');
     }
 }
 
