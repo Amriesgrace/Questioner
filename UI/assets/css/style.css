@@ -1,0 +1,174 @@
+/* 
+* Andela Bootcamp Challenge
+* Questioner CSS
+*
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5em;
+    font-family:'Source Sans Pro', sans-serif;
+    background: #fff;
+    color: #000;
+}
+a{
+    color: #99d3c4;
+    text-decoration: none;
+}
+/* mcss */
+.brand-color{
+    color:#99d3c4  ;
+}
+.brand-bg{
+    background:#99d3c4  ;
+}
+.bd-blk{
+    border: 1px solid;
+}
+.mt-5{
+    margin-top: 20px;
+}
+.mt-2e{ margin-top: 2em;}
+.mb-2e{ margin-bottom: 3em; }
+.mt-5e{
+    margin-top: 5em !important;
+}
+.text-dark{ color: #272727;}
+.f-38{ font-size: 38px;}
+.f-24 { font-size: 24px; }
+.l--8{ line-height: 0.8; }
+.light{ font-weight: 300; }
+.mt-3e{
+    margin-top: 3em;
+}
+.mt-9e{ margin-top:10em !important; }
+.pt-5e{
+    padding-top: 5em;
+}
+.text-center{
+    text-align: center;
+}
+.text-white{
+    color:#fff;
+}
+.btn{
+    border-radius: 0;
+    height: 37px;
+    width: 120px;
+    background: transparent
+}
+.header{
+    background: #e5e5e5;
+    border-bottom: 1px solid #ddd;
+}
+.footer{
+    background: #e5e5e5;
+    border-top: 1px solid #ddd;
+    margin-top: 3em;
+    padding: 10px 0;
+}
+.btn-outline-brand{
+    border: 2px solid #99d3c4 ;
+    color: #99d3c4 ;
+}
+.btn-outline-white{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.logo-container{ 
+    font-size: 30px;
+    padding: 0.4em;
+}
+.logo{
+    text-decoration: none;
+    font-weight: 200;
+}
+.logo:hover{
+    text-decoration: none;
+}
+.container{
+    margin: 0 2em;
+    padding: 1em;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start
+}
+div.logo{
+    align-self: flex-start;
+}
+.navbar-collapse{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    display: inline-flex;
+    flex-grow: 1;
+}
+.nav-list{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 1em;
+    border: 1px saddlebrown;
+}
+.nav-item{
+    text-decoration: none;
+    color: #272727;
+    font-weight: 300
+}
+.nav-item:hover{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #99d3c4 ;
+    font-weight: 600;
+}
+.form-container{
+    width: 500px;
+    margin: auto; 
+}
+.form-control{
+    height: 37px;
+    width: 90%;
+    padding: 0 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    border: 1px solid #a7a7a7;
+}
+.login-form{
+    padding: 2em 4em 3em 5em;
+}
+.login-btn{
+    padding: 10px 3em;
+    background: #99d3c4;
+    color: #fff;
+    text-decoration: none;
+}
+.login-btn:hover, .signup-btn:hover{
+    background: #272727;
+
+}
+
+/* soft black for text = rgba(71,71,71,.88) */
+/*Responsive css
+* Media queries  
+*/
+
+@media screen and (max-width: 400px) {
+    .form-container{
+        width: 300px;
+    }
+    .login-form{
+        padding: 1em 1em 3em 2em;
+    }
+    .form-group.mt-5{
+        margin-top: 30px;
+    }
+}
