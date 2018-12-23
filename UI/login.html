@@ -15,18 +15,28 @@
                 <nav class="">
                     <div class="navbar" id="navbar">
                         <div class="logo-container">
-                            <a href="index.html" class="logo"><h3 class="brand-color">Questioner</h3></a>
+                            <a href="index.html" class="logo"><h4 class="brand-color">Questioner</h4></a>
                         </div>
-                        <ul class="navbar-collapse">
-                            <li class="nav-list">
+                        <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
+                        <ul class="navbar-collapse collapse" id="nav_menu">
+                            <li class="nav-list active">
                                 <a href="index.html" class="nav-item">Home</a>
                             </li>
-                            
                             <li class="nav-list">
-                                <a href="login.html" class="nav-item">Login</a>
+                                <a href="meetup.html" class="nav-item">Meetups</a>
                             </li>
                             <li class="nav-list">
-                                <a href="register.html" class="nav-item">Sign Up</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Log In
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="login.html">Log In</a>
+                                        <a href="register.html">Sign Up</a>
+                                        <a href="profile.html">My Profile</a>
+                                        
+                                    </div>
+                                </div> 
                             </li>
                             <!-- how to enter html tags onn different lines using emmet -->
                         </ul>

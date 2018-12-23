@@ -22,57 +22,112 @@ a{
     color: #99d3c4;
     text-decoration: none;
 }
-/* mcss */
-.brand-color{
-    color:#99d3c4  ;
+/*** COLOR & BACKGROUNDS ***/
+.brand-color{ color:#99d3c4; }
+.brand-bg{ background:#99d3c4; }
+.blue-bg{ background: rgb(147, 228, 228, 0.7); }
+.text-dark{ color: #272727; }
+.text-black-2{ color:  rgba(71,71,71,.88); }
+.text-white{ color:#fff; }
+
+
+/*** BORDERS ***/
+.bd-blk{ border: 1px solid; }
+.bd-light{ border: 1px solid rgba(71,71,71,.88); }
+.bd-r-light{ border-right: 1px solid rgba(71,71,71,.88); }
+.bd-t-light{ border-top: 1px solid rgba(71,71,71,.88); }
+.rounded{ border-radius: 50%; }
+.shadow{ box-shadow: 1px 3px 5px 6px #e5e5e5; }
+
+
+/*** WIDTH ***/
+.text-uppercase{ text-transform: uppercase;}
+.w-100{ width: 100%; }
+.w-80p { width: 80%; }
+.w-50{ width: 50px; }
+.col-1{
+    display: inline-flex;
+    width: 15%;
 }
-.brand-bg{
-    background:#99d3c4  ;
+.col-3{
+    display: inline-flex;
+    width: 30%;
 }
-.bd-blk{
-    border: 1px solid;
+.col-8{
+    display: inline-flex;
+    width: 60%;
 }
-.mt-5{
-    margin-top: 20px;
+.col-9{
+    display: inline-flex;
+    width: 75%;
 }
-.mt-2e{ margin-top: 2em;}
+.col-10{
+    display: inline-flex;
+    width: 85%;
+}
+
+/*** PADDING ***/
+.p-1{ padding: 1em; }
+.pb-1e{ padding-bottom: 1em !important; }
+.pr-5{ padding-right: 5px; }
+.pr-2e{ padding-right: 1.5em; }
+.pt-5e{ padding-top: 5em; }
+.pt-3e{ padding-top: 3em; }
+.pt-1e{ padding-top: 1em; }
+.px-2{ 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*** MARGIN ***/
+.mt-5{ margin-top: 20px; }
+.mt-2e{ margin-top: 2em; }
 .mb-2e{ margin-bottom: 3em; }
-.mt-5e{
-    margin-top: 5em !important;
-}
-.text-dark{ color: #272727;}
+.mb-1e{ margin-bottom: 1em; }
+.mb-2{ margin-bottom: 2em; }
+.mt-5e{ margin-top: 5em !important; }
+.mt-3e{ margin-top: 3em; }
+.mt-9e{ margin-top:10em; }
+.mx-auto{ margin: 0 auto;}
+
+.wrap{ flex-wrap: wrap; }
+
+
+/*** FONTS ***/
 .f-38{ font-size: 38px;}
 .f-24 { font-size: 24px; }
+.f-12{ font-size: 12px; }
 .l--8{ line-height: 0.8; }
 .light{ font-weight: 300; }
-.mt-3e{
-    margin-top: 3em;
-}
-.mt-9e{ margin-top:10em !important; }
-.pt-5e{
-    padding-top: 5em;
-}
-.text-center{
-    text-align: center;
-}
-.text-white{
-    color:#fff;
-}
+
+/*** TEXT ALIGN  ***/
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
+
+/*** SPACING ***/
+.space-even{ justify-content: space-evenly; }
+.space-around{  justify-content: space-around; }
+
+/*** POSITION ***/
+.pos-rel{ position: relative; }
+.pos-abs{ position: absolute; }
+.t-45p{ top: 45%; }
+.r-38p{ right: 38%; }
+
+/*** DISPLAY ***/
+.dis-flex{ display: flex; }
+.dis-inline{ display: inline-flex; }
+.dis-block{ display: block; }
+.list-unstyled{ list-style-type: none; }
+
+
+/*** BUTTONS ***/
 .btn{
     border-radius: 0;
     height: 37px;
     width: 120px;
     background: transparent
-}
-.header{
-    background: #e5e5e5;
-    border-bottom: 1px solid #ddd;
-}
-.footer{
-    background: #e5e5e5;
-    border-top: 1px solid #ddd;
-    margin-top: 3em;
-    padding: 10px 0;
 }
 .btn-outline-brand{
     border: 2px solid #99d3c4 ;
@@ -82,6 +137,34 @@ a{
     border: 1px solid #fff;
     color: #fff;
 }
+.link-btn{
+    padding: 0.4em 1em;
+    border-radius: 20px;
+}
+.login-btn{
+    padding: 10px 3em;
+    background: #99d3c4;
+    color: #fff;
+    text-decoration: none;
+}
+.login-btn:hover, .signup-btn:hover{
+    background: #272727;
+}
+
+.header{
+    background: #e5e5e5;
+    border-bottom: 1px solid #ddd;
+}
+.footer{
+    background: #e5e5e5;
+    border-top: 1px solid #ddd;
+    margin-top: 3em;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
 .logo-container{ 
     font-size: 30px;
     padding: 0.4em;
@@ -97,15 +180,11 @@ a{
     margin: 0 2em;
     padding: 1em;
 }
-
 /* navbar */
-.navbar{
+.navbar {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start
-}
-div.logo{
-    align-self: flex-start;
 }
 .navbar-collapse{
     flex-wrap: wrap;
@@ -117,23 +196,83 @@ div.logo{
     list-style-type: none;
     display: inline-flex;
     padding: 1em;
-    border: 1px saddlebrown;
+}
+
+/* Dropdown button */
+.dropdown {
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    border: 1px solid #99d3c4;
+    outline: none;
+    color: #000;
+    padding: 5px 15px;
+    background-color: inherit;
+    margin: 0;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #99d3c4;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #99d3c4;
+    color: #fff;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-list.active{
+    background: #99d3c4;
 }
 .nav-item{
     text-decoration: none;
     color: #272727;
     font-weight: 300
 }
+.nav-list.active>.nav-item:hover{
+    color: #fff;
+}
 .nav-item:hover{
     text-transform: uppercase;
     font-size: 16px;
-    color: #99d3c4 ;
+    color: #99d3c4;
     font-weight: 600;
+}
+.navbar-toggler{
+    width: 50px;
+    height: 50px;
+}
+.collapse{
+    display: none;
+}
+.show{
+    display: flex;
 }
 .form-container{
     width: 500px;
     margin: auto; 
 }
+
 .form-control{
     height: 37px;
     width: 90%;
@@ -145,30 +284,15 @@ div.logo{
 .login-form{
     padding: 2em 4em 3em 5em;
 }
-.login-btn{
-    padding: 10px 3em;
-    background: #99d3c4;
-    color: #fff;
-    text-decoration: none;
+.profile-card {
+    box-shadow: 1px 3px 5px 6px #e5e5e5;
 }
-.login-btn:hover, .signup-btn:hover{
-    background: #272727;
-
+.meetup-time{
+    padding: 1em 0.4em;
 }
-
-/* soft black for text = rgba(71,71,71,.88) */
-/*Responsive css
-* Media queries  
-*/
-
-@media screen and (max-width: 400px) {
-    .form-container{
-        width: 300px;
-    }
-    .login-form{
-        padding: 1em 1em 3em 2em;
-    }
-    .form-group.mt-5{
-        margin-top: 30px;
-    }
+.user-profile-img{
+    width: 100px;
+}
+.img-card{
+    padding: 4em 0;
 }

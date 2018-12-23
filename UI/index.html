@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Questioner - Homepage</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
     <body>
         <!-- header -->
@@ -17,16 +20,26 @@
                         <div class="logo-container">
                             <a href="index.html" class="logo"><h4 class="brand-color">Questioner</h4></a>
                         </div>
-                        <ul class="navbar-collapse">
-                            <li class="nav-list">
+                        <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
+                        <ul class="navbar-collapse collapse" id="nav_menu">
+                            <li class="nav-list active">
                                 <a href="index.html" class="nav-item">Home</a>
                             </li>
-                           
                             <li class="nav-list">
-                                <a href="login.html" class="nav-item">Login</a>
+                                <a href="meetup.html" class="nav-item">Meetups</a>
                             </li>
                             <li class="nav-list">
-                                <a href="register.html" class="nav-item">Sign Up</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Log In
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="login.html">Log In</a>
+                                        <a href="register.html">Sign Up</a>
+                                        <a href="profile.html">My Profile</a>
+                                        
+                                    </div>
+                                </div> 
                             </li>
                             <!-- how to enter html tags onn different lines using emmet -->
                         </ul>
@@ -44,7 +57,7 @@
                         Welcome to <span class="brand-color">Questioner </span> <br> <br> An app that Crowd-source questions for a meetup. 
                         
                     </h3>
-                   <h2 class="mt-2e f-24 light mb-2e"> <span class="brand-color">​Questioner​​</span>  helps the meetup organizers prioritize questions to be answered</h2>
+                   <h2 class="mt-2e f-24 light mb-2e l--3"> <span class="brand-color">​Questioner​​</span>  helps the meetup organizers prioritize questions to be answered</h2>
                    <a href="login.html" class="btn login-btn"> <strong>Login</strong> </a>
                 </div>
                 
@@ -59,6 +72,11 @@
             </div>
         </footer>
         <!-- ./footer -->
+
+        <script src="assets/js/main.js"></script>
+        <script>
+            app.navbarToggler();
+        </script>
         
     </body>
 </html>
