@@ -21,6 +21,7 @@ html, body{
 a{
     color: #99d3c4;
     text-decoration: none;
+    cursor: pointer;
 }
 /*** COLOR & BACKGROUNDS ***/
 .brand-color{ color:#99d3c4; }
@@ -326,7 +327,8 @@ a{
 .form-control{
     height: 37px;
     width: 90%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 10px;
     border-radius: 0;
     border: 1px solid #a7a7a7;
