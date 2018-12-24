@@ -34,6 +34,7 @@ const app ={
         const navHandler = () => {
             if (navMenu.classList.contains('collapse')) {
                 showCollapsedNav();
+                console.log('yes');
                 
             } else{
                 console.log('no');
@@ -51,6 +52,35 @@ const app ={
         navBtn.addEventListener('click', navHandler);
         
     },
+    initQuestionModal: () => {
+        const modal = document.getElementById('question_modal');
+        const startQuestionModal = document.getElementById('question_btn');
+        const cancelBtn = document.getElementById('cancel_btn');
+        const closeModal = document.getElementById('close');
+        
+    
+        const activateModal = (ev) => {
+          modal.style.display = 'block';
+        };
+        const activateCloseModal = (ev) => {
+          modal.style.display = 'none';
+        };
+        const modalBackdrop = (ev) => {
+          if (ev.target == modal) {
+            modal.style.display = 'none';
+          }
+        };
+        const altCloseModal = () => {
+            modal.style.display= 'none';
+        }
+
+    
+        startQuestionModal.addEventListener('click', activateModal);
+        cancelBtn.addEventListener('click', activateCloseModal);
+        window.addEventListener('click', modalBackdrop);
+        closeModal.addEventListener('click', altCloseModal);
+        // deleteProductBtn.addEventListener('click', confirmAction);
+    }
     
 }
 

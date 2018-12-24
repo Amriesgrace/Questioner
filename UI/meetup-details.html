@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Questioner - Homepage</title>
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <nav class="">
+                    <div class="navbar" id="navbar">
+                        <div class="logo-container">
+                            <a href="index.html" class="logo"><h4 class="brand-color">Questioner</h4></a>
+                        </div>
+                        <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
+                        <ul class="navbar-collapse collapse" id="nav_menu">
+                            <li class="nav-list active">
+                                <a href="index.html" class="nav-item">Home</a>
+                            </li>
+                            <li class="nav-list">
+                                <a href="meetup.html" class="nav-item">Meetups</a>
+                            </li>
+                            <li class="nav-list">
+                                <div class="dropdown">
+                                    <button class="dropbtn">Log In
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="login.html">Log In</a>
+                                        <a href="register.html">Sign Up</a>
+                                        <a href="profile.html">My Profile</a>
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ./ header -->
+
+        <!-- main -->
+        <main>
+            <div class="container">
+                <div class="wrapper mt-5e">
+                    <div class="col-9">
+                        <div class="heading w-100">
+                            <div class="col-1">
+                                <div class="blue-bg p-1 text-white">
+                                    <span> <strong>19 </strong></span>
+                                    <br>
+                                    <span> <strong>OCT </strong></span>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="wrapper pt-1e px-2">
+                                    <div class="title">
+                                        <p class="text-black-2">19<sup>th</sup> January, 2019</p>
+                                        <h1 class="mt-5 ">Gryffindor Meets - </h1>
+                                        <p class="text-black-2 mt-5">Hosted by Captain of Gryffindor quidditch team - 
+                                            <span class="brand-oliver">Oliver Wood</span>
+                                        </p>
+                                        <p class="text-black-2">House members only</p>
+                                    </div>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="w-100 ">
+                            <h3>
+                                Are you going?
+                                <span class="text-black-2 light">Respond by 4:00 PM</span>
+                            </h3>
+                            <div class="mt-1e">
+                                <button class="btn btn-outline-brand"><i class="fa fa-check"></i></button>
+                                <button class="btn btn-outline-brand"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="wrapper mt-3e bd-t-light">
+                    <div class="col-9">
+                        <div class="w-100 px-3e pt-1e">
+                            <h3>Details</h3>
+                            <p class="mt-1e">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, et! Ea architecto nisi illum. 
+                                Cumque voluptatem illum earum eveniet nihil maxime sapiente. 
+                                Ex perferendis dolore repellendus libero voluptatum veritatis rerum.
+                                <br>    
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, et! Ea architecto nisi illum. 
+                                Cumque voluptatem illum earum eveniet nihil maxime sapiente. 
+                                Ex perferendis dolore repellendus libero voluptatum veritatis rerum.
+                                <br>
+
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, et! Ea architecto nisi illum. 
+                                Cumque voluptatem illum earum eveniet nihil maxime sapiente. 
+                                Ex perferendis dolore repellendus libero voluptatum veritatis rerum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="w-100 shadow px-2 pt-1e pb-1e mt-1e">
+                            <p>
+                                <i class="fa f-clock"></i>
+                                Thursday, January 2019 <br> 
+                                <span class="text-black-2">
+                                    5:45PM to 6:30 PM
+                                </span> 
+                            </p>
+                            <p class="mt-1e">Every 3rd Thursday of the month</p>
+                            <p class="mt-1e">
+                                <i class="fa fa-map-marker"></i>
+                                At the Room of Requirement
+                            </p>
+                            <div class="mt-1e">
+                                How to find us?
+                                <p class="text-black-2">
+                                    The Room of Requirement is located on Hogwarts' seventh floor, across from the tapestry of Barnabas the Barmy
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper mt-3e">
+                    <div class="col-9">
+                        <div class="w-100 px-2 mt-2e shadow pt-3e">
+                            <div class="dis-flex space-between wrap question-section">
+                                <span class="f-38">Questions</span>
+                                <button id="question_btn" class="btn btn-outline-brand btn-md" data-toggle="modal">Ask a Question</button>
+                                <div id="question_modal" class='modal'>
+                                    <!-- modal content -->
+                                    <div class='modal-content'>
+                                        <!-- header -->
+                                        <div class="modal-header">
+                                            <span class="close" id="close">&times;</span>
+                                            <h2>Ask a question about gryffindor meet</h2>
+                                        </div>
+                                        <!-- modal body -->
+                                        <div class="modal-body mt--3">
+                                            <div class="content-wrapper">
+                                                <form action="" class="mt-5">
+                                                    <div class="form-group">
+                                                        <label for="">Title</label>
+                                                        <br>
+                                                        <textarea name="" id="" class="form-control pt-1e h-100" rows="10" placeholder="Ask your question here"></textarea>
+                                                    </div>
+                                                    <div class="form-group mt-5 text-center">
+                                                        <button type="submit" class="btn btn-outline-brand">Submit</button>
+                                                        <button class="btn ml--3" id='cancel_btn'>Cancel</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- ./ modal body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-3e pb-3e  w-100 text-center">
+                                No Questions Asked yet?
+                            </div>
+                            <div class="w-100 pt-1e pb-3e bd-light">
+                                <p class="text-black-2 text-center"> 
+                                    <em>Comments</em>
+                                </p>
+                                <div class="comment px-2 pb-1e">
+                                    <div class="user-img">
+                                        <img src="assets/img/user-profile.jpg" alt="" class="w-50">
+                                    </div>
+                                    <div class="comment-body mt-5 ">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit in, 
+                                            illum consequuntur ex dolores ad iure, 
+                                            asperiores molestiae cumque inventore pariatur soluta commodi quos, 
+                                            illo sequi? Numquam eligendi provident ea.
+                                        </p>
+                                        <div class="vote">
+                                            <a href="" class="btn upvote  upvote-btn">
+                                                <i class="fa fa-arrow-up brand-color"></i>
+                                                <span>upvote</span>
+                                                <span class="upvote-count">10</span>
+                                            </a>
+                                            <a href="" class="btn downvote-btn">
+                                                <i class="fa fa-arrow-down c-warning"></i>
+                                                <span>downvote</span>
+                                                <span class="downvote-count">5</span>
+                                            </a>
+                                            <a href="" class="">
+                                                <i class="fa fa-comment"></i>
+                                                comment
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <!-- ./main -->
+
+        <!-- footer -->
+        <footer class="footer mt-5e">
+            <div class="container">
+                <p class="text-center light">2018 Andela bootcamp developer challenge cycle 40 </p>
+            </div>
+        </footer>
+        <!-- ./footer -->
+        
+        <script src="assets/js/main.js"></script>
+        <script>
+            app.navbarToggler();
+            app.initQuestionModal();
+        </script>
+    </body>
+</html>
