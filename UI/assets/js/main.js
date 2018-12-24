@@ -34,10 +34,7 @@ const app ={
         const navHandler = () => {
             if (navMenu.classList.contains('collapse')) {
                 showCollapsedNav();
-                console.log('yes');
-                
             } else{
-                console.log('no');
                 hideNav();
               }
             };
