@@ -1,6 +1,6 @@
 import express from 'express';
 import Meetups from '../controllers/api/v1/meetups/meetup';
-import Questions from '../controllers/api/v1/questions/questions';
+import Questions from '../controllers/api/v1/questions/question';
 
 const router = express.Router();
 
@@ -15,5 +15,8 @@ router.get('/api/v1/meetups', Meetups.getMeetups);
 
 // get upcoming meetups
 router.get('/api/v1/meetups/upcoming', Meetups.getUpcoming);
+
+// create a question
+router.post('/api/v1/question', Questions.createQuestion);
 
 export default router;
