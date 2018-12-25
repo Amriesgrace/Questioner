@@ -2,11 +2,11 @@ const meetupRecord = [
     {
         id: 1,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: 1545733221973,
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: 1545733221973,
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
