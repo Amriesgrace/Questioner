@@ -22,7 +22,7 @@ const getUpcoming = (req, res) => {
     });
 };
 
-const rsvp = (req,res) => {
+const rsvp = (req, res) => {
     const reqId = req.params.id;
     const result = AllMeetups.find(meetup => meetup.id == reqId);
 
@@ -31,7 +31,7 @@ const rsvp = (req,res) => {
             meetupId: result.meetupId,
             topic: result.topic,
             status: req.body.rsvp
-        }
+        };
         AllMeetups.push(rsvpStatus);
         res.status(201).json({
             status: 201,
@@ -42,9 +42,9 @@ const rsvp = (req,res) => {
         res.status(401).json({
             status: 401,
             message: 'Unable to find meetup with this id'
-        })
+        });
     }
-}
+};
 
 
 const meetup = {
