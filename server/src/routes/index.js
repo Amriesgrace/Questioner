@@ -19,4 +19,11 @@ router.get('/api/v1/meetups/upcoming', Meetups.getUpcoming);
 // create a question
 router.post('/api/v1/question', Questions.createQuestion);
 
+// upvote a question
+router.patch('/api/v1/question/:id/upvote', Questions.upvote);
+
+// downvote a question
+router.patch('/api/v1/question/:id/downvote', Questions.downvote);
+
+
 export default router;
