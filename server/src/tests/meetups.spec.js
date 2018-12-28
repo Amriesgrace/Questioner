@@ -35,22 +35,22 @@ describe('/GET meetups/upcoming', () => {
 });
 
 // test for endpoint to post rsvp status
-describe('/POST meetups/:id/rsvp', () => {
-    // POST - rsvp status
-    it('should post rsvp status for a meetup with a specific id', (done) => {
-        chai.request(app)
-            .post('/api/v1/meetups/:id/rsvp')
-            .send({
-                data: {
-                    meetupId: 10012,
-                    topic: 'meetup topic',
-                    status: 'maybe'
-                }
-            })
-            .end((err, res) => {
-                expect(res).to.have.status(201);
-                expect(res.body).to.be.an('array');
-                done();
-            });
-    });
-});
+// describe('/POST meetups/:id/rsvp', () => {
+//     // POST - rsvp status
+//     it('should post rsvp status for a meetup with a specific id', (done) => {
+//         chai.request(app)
+//             .post('/api/v1/meetups/:id/rsvp')
+//             .send({
+//                 data: {
+//                     meetupId: 10012,
+//                     topic: 'meetup topic',
+//                     status: 'maybe'
+//                 }
+//             })
+//             .end((err, res) => {
+//                 expect(res).to.have.status(201);
+//                 expect(res.body).to.be.an('array');
+//                 done();
+//             });
+//     });
+// });
