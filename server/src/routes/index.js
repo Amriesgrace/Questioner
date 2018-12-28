@@ -16,6 +16,9 @@ router.get('/api/v1/meetups', Meetups.getMeetups);
 // get upcoming meetups
 router.get('/api/v1/meetups/upcoming', Meetups.getUpcoming);
 
+// rsvp to a meetup
+router.post('/api/v1/meetups/:id/rsvp', Meetups.rsvp);
+
 // create a question
 router.post('/api/v1/question', Questions.createQuestion);
 
@@ -25,8 +28,7 @@ router.patch('/api/v1/question/:id/upvote', Questions.upvote);
 // downvote a question
 router.patch('/api/v1/question/:id/downvote', Questions.downvote);
 
-// rsvp to a meetup
-router.post('/api/v1/meetups/:id/rsvp', Meetups.rsvp);
+
 
 
 export default router;
