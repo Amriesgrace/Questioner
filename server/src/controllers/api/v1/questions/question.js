@@ -10,7 +10,7 @@ const createQuestion = (req, res) => {
     };
     AllQuestions.push(newQuestion);
 
-    res.status(200).json({
+    res.status(201).json({
         status: res.statusCode,
         message: 'new question posted',
         data: newQuestion,
