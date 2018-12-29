@@ -11,7 +11,7 @@ const createQuestion = (req, res) => {
     AllQuestions.push(newQuestion);
 
     res.status(201).json({
-        status: 201,
+        status: res.statusCode,
         message: 'new question posted',
         data: newQuestion,
     });
@@ -29,7 +29,7 @@ const upvote = (req, res) => {
             votes: result.votes + 1,
         };
         res.status(200).json({
-            status: 200,
+            status: res.statusCode,
             data: [newResult],
             // vote: newResult,
         });

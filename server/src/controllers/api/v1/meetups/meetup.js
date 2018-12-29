@@ -24,7 +24,7 @@ const getUpcoming = (req, res) => {
 
 const rsvp = (req, res) => {
     const reqId = req.params.id;
-    const result = AllMeetups.find(meetup => meetup.id == reqId);
+    const result = AllMeetups.find(meetup => Number(meetup.id) == reqId);
 
     if (result) {
         const rsvpStatus = {
@@ -34,16 +34,20 @@ const rsvp = (req, res) => {
         };
         AllMeetups.push(rsvpStatus);
         res.status(201).json({
-            status: 201,
+            status: res.statusCode,
+            success: true,
             message: 'Your rsvp status',
             data: [rsvpStatus]
         });
+        console.log(res.body);
     } else {
         res.status(401).json({
             status: 401,
+            success: false,
             message: 'Unable to find meetup with this id'
         });
     }
+    
 };
 
 
