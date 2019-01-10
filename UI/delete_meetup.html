@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Questioner - Homepage</title>
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <nav class="">
+                    <div class="navbar" id="navbar">
+                        <div class="logo-container">
+                            <a href="index.html" class="logo"><h4 class="brand-color">Questioner</h4></a>
+                        </div>
+                        <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
+                        <ul class="navbar-collapse collapse" id="nav_menu">
+                            <li class="nav-list active">
+                                <a href="index.html" class="nav-item">Home</a>
+                            </li>
+                            <li class="nav-list">
+                                <a href="meetup.html" class="nav-item">Meetups</a>
+                            </li>
+                            <li class="nav-list">
+                                <div class="dropdown">
+                                    <button class="dropbtn">Log In
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="login.html">Log In</a>
+                                        <a href="register.html">Sign Up</a>
+                                        <a href="profile.html">My Profile</a>
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ./ header -->
+
+        <!-- main -->
+        <main>
+            <div class="container dis-flex justify-center">
+                <div class="col-9 mt-5e">
+                    <div class="row justify-center mt-3e">
+                        <div class="col-9">
+                            <div class="mb-2e text-center">
+                                <p class="f-24">Delete Meetups</p>
+                                <!-- <a href="create_meetup.html" class="f-24">Create a new meetup</a> -->
+                            </div>
+
+                            <div class="container-lg bd-light ">
+                                <a id="delete_meetup" data-toggle="modal" title="click to ">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="meetup-time">
+                                                    <h3 class="text-black-2">
+                                                        19 OCT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="p-1">
+                                                    <h5 class="meetup-group-name text-black-2 text-uppercase"><strong>FreeCodeCamp Lagos </strong> </h5>
+                                                    <div class="meetup-title">
+                                                        <h2>Gryffindor Meets</h2>
+                                                    </div>
+                                                    <p class="light text-black-2">120 campers going</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- mo -->
+                                <div id="delete_modal" class='modal'>
+                                    <!-- modal content -->
+                                    <div class='modal-content mt-3e'>
+                                        <!-- header -->
+                                        <div class="modal-header">
+                                            <span class="close" id="close">&times;</span>
+                                            <h2>Confirm Delete Action</h2>
+                                        </div>
+                                        <!-- modal body -->
+                                        <div class="modal-body mt--3">
+                                            <div class="content-wrapper py-2e">
+                                                    <p class="text-center f-18">Do you want to delete this meetup</p>
+                                                    <div class="form-group mt-5 text-center">
+                                                        <button type="submit" class="btn btn-outline-brand">Yes</button>
+                                                        <button class="btn ml--3" id='cancel_btn'>Cancel</button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <!-- ./ modal body -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-lg bd-light mt-3e">
+                                <a href="meetup_details.html">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="meetup-time">
+                                                    <h3 class="text-black-2">
+                                                        19 OCT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="p-1">
+                                                    <h5 class="meetup-group-name text-black-2 text-uppercase"><strong>FreeCodeCamp Lagos </strong> </h5>
+                                                    <div class="meetup-title">
+                                                        <h2>Gryffindor Meets</h2>
+                                                    </div>
+                                                    <p class="light text-black-2">120 campers going</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="container-lg bd-light mt-3e">
+                                <a href="meetup_details.html">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="meetup-time">
+                                                    <h3 class="text-black-2">
+                                                        19 OCT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="p-1">
+                                                    <h5 class="meetup-group-name text-black-2 text-uppercase"><strong>FreeCodeCamp Lagos </strong> </h5>
+                                                    <div class="meetup-title">
+                                                        <h2>Gryffindor Meets</h2>
+                                                    </div>
+                                                    <p class="light text-black-2">120 campers going</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="container-lg bd-light mt-3e">
+                                <a href="meetup_details.html">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="meetup-time">
+                                                    <h3 class="text-black-2">
+                                                        19 OCT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="p-1">
+                                                    <h5 class="meetup-group-name text-black-2 text-uppercase"><strong>FreeCodeCamp Lagos </strong> </h5>
+                                                    <div class="meetup-title">
+                                                        <h2>Gryffindor Meets</h2>
+                                                    </div>
+                                                    <p class="light text-black-2">120 campers going</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="container-lg bd-light mt-3e">
+                                <a href="meetup_details.html">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="meetup-time">
+                                                    <h3 class="text-black-2">
+                                                        19 OCT
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="p-1">
+                                                    <h5 class="meetup-group-name text-black-2 text-uppercase"><strong>FreeCodeCamp Lagos </strong> </h5>
+                                                    <div class="meetup-title">
+                                                        <h2>Gryffindor Meets</h2>
+                                                    </div>
+                                                    <p class="light text-black-2">120 campers going</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </main>
+        <!-- ./main -->
+
+        <!-- footer -->
+        <footer class="footer mt-5e">
+            <div class="container">
+                <p class="text-center light">2018 Andela bootcamp developer challenge cycle 40 </p>
+            </div>
+        </footer>
+        <!-- ./footer -->
+        <script src="assets/js/main.js"></script>
+        <script>
+            app.navbarToggler();
+            app.initDeleteMeetupConfirmationModal();
+        </script>
+        
+    </body>
+</html>

@@ -1,14 +1,14 @@
 import chai from 'chai';
 import { describe, it } from 'mocha';
 import chaiHttp from 'chai-http';
-import app from '../../../app';
+import app from '../../../../app';
 
 const { expect } = chai;
 chai.use(chaiHttp);
 
 
 
-// test for endpoint to get all meetup records
+// test for endpoint 
 // describe('/GET meetups', () => {
 //     // GET - List all meetups
 //     it('should return all meetups', (done) => {
@@ -26,7 +26,7 @@ chai.use(chaiHttp);
 
 
 // test for endpoint to post a question
-/* describe('/POST a question', () => {
+ describe('/POST a question', () => {
     // POST - question
     it('should post a question about a meetup', (done) => {
         const question = {
@@ -45,8 +45,8 @@ chai.use(chaiHttp);
                 done();
             });
     });
-}); */
-
+}
+/*
 describe('/PATCH question/upvote', () => {
     // vote on  a question
     it('should increase the number of votes by 1', (done) => {
@@ -88,3 +88,4 @@ describe('/PATCH question/downvote', () => {
             });
     });
 });
+*/
