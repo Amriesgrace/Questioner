@@ -1,13 +1,13 @@
 import AllMeetups from '../../models/meetupRecord';
 
 /**
- * @param  {} req
- * @param  {} res
- * @param  {} =>{res.status(200
- * @param  {200} .json({status
- * @param  {true} success
- * @param  {{AllMeetups}}} data
- */
+ * @function getMeetups
+ *
+ * Handles get request for route api/v1/meetups
+ *
+ * @param  {object} req
+ * @param  {object} res
+*/
 const getMeetups = (req, res) => {
     return res.status(200).json({
         status: 200,
@@ -17,14 +17,14 @@ const getMeetups = (req, res) => {
         }
     });
 };
+
 /**
- * @param  {} req
- * @param  {} res
- * @param  {} =>{res.status(200
- * @param  {200} .json({status
- * @param  {true} success
- * @param  {{AllMeetups} data
- * @param  {} }}
+ * @function getUpcoming
+ *
+ * Handles get request for route api/v1/meetups/upcoming
+ *
+ * @param  {object} req
+ * @param  {object} res
  */
 const getUpcoming = (req, res) => {
     return res.status(200).json({
@@ -35,15 +35,14 @@ const getUpcoming = (req, res) => {
         }
     });
 };
+
 /**
- * @param  {} req
- * @param  {} res
- * @param  {} =>{constreqId=req.params.id;constresult=AllMeetups.find(meetup=>Number(meetup.id
- * @param  {} ==reqId
- * @param  {} ;if(result
- * @param  {result.meetupId} {constrsvpStatus={meetupId
- * @param  {result.topic} topic
- * @param  {req.body.rsvp};AllMeetups.push(rsvpStatus} status
+ * @function rsvp
+ *
+ * Post rsvp to route api/v1/meetups/rsvp
+ *
+ * @param  {object} req
+ * @param  {object} res
  */
 const rsvp = (req, res) => {
     const reqId = req.params.id;
@@ -69,7 +68,6 @@ const rsvp = (req, res) => {
         data: [rsvpStatus]
     });
 };
-
 
 
 const meetup = {
