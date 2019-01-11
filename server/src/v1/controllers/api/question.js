@@ -23,9 +23,10 @@ const createQuestion = (req, res) => {
     };
     AllQuestions.push(newQuestion);
 
-    res.status(201).json({
+    return res.status(201).json({
         status: res.statusCode,
         message: 'new question posted',
+        success: true,
         data: newQuestion,
     });
 };
@@ -50,24 +51,22 @@ const createQuestion = (req, res) => {
  */
 const upvote = (req, res) => {
     const reqId = req.params.id;
-    const result = AllQuestions.find(question => Number(question.id) === reqId);
-    if (result) {
-        const newResult = {
-            id: result.questionId,
-            title: result.title,
-            question: result.body,
-            votes: result.votes + 1,
-        };
-        res.status(200).json({
-            status: res.statusCode,
-            data: [newResult]
-        });
-    } else {
-        res.status(404).json({
+    const result = AllQuestions.find(question => question.id === Number(reqId));
+    if (!result) {
+        return res.status(404).json({
             status: 404,
+            success: false,
             message: 'no question with this id',
         });
     }
+    const newResult = {
+        votes: result.votes + 1,
+    };
+    return res.status(200).json({
+        status: 200,
+        data: [newResult],
+        success: true,
+    });
 };
 
 /**
@@ -91,7 +90,7 @@ const upvote = (req, res) => {
  */
 const downvote = (req, res) => {
     const reqId = req.params.id;
-    const result = AllQuestions.find(question => Number(question.id) === reqId);
+    const result = AllQuestions.find(question => question.id === Number(reqId));
     if (result) {
         const newResult = {
             id: result.questionId,
@@ -100,16 +99,16 @@ const downvote = (req, res) => {
             votes: result.votes - 1,
         };
         AllQuestions.push(newResult);
-        res.status(200).json({
+        return res.status(200).json({
             status: 200,
             data: [newResult],
-        });
-    } else {
-        res.status(404).json({
-            status: 404,
-            message: 'no question with this id',
+            success: true
         });
     }
+    return res.status(404).json({
+        status: 404,
+        message: 'no question with this id',
+    });
 };
 
 

@@ -1,81 +1,47 @@
 
 const validateParamId = (req, res, next) => {
-    const reqId = req.params.id;
+    const reqId = Number(req.params.id);
     if (typeof reqId === 'string') {
         return res.status(403).json({
             status: res.statusCode,
-            message: 'You entered a letter id use numbers instead'
+            message: 'You entered a letter id, use numbers instead'
         });
     }
     return next();
 };
 
 const validateRsvp = (req, res, next) => {
-    if (!req) {
-        return res.status(400).json({
-            success: false,
-            message: 'The request req should not be empty'
-        });
-    }
-    if (!Number(req.meetupId)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The meetupId has to be a number'
-        });
-    }
-    if (!String(req.topic)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The topc should be a string'
-        });
-    }
-    if (!String(req.rsvp)) {
+    const { status } = req.body;
+    if (!String(status)) {
         return res.status(400).json({
             success: false,
             message: 'Your rsvp status shoulv be a string',
-        });
-    }
-    if (!req.meetupId || !req.topic || !req.rsvp) {
-        return res.status(400).json({
-            success: false,
-            message: ' one of your fields is empty'
         });
     }
     return next();
 };
 
 const validateQuestionInput = (req, res, next) => {
-    if (!req) {
-        return res.status(400).json({
-            success: false,
-            message: 'The request should not be empty'
-        });
-    }
-    if (!Number(req.id)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The id has to be a number'
-        });
-    }
-    if (!String(req.username)) {
+    const { title, username, question } = req.body;
+    if (!String(username)) {
         return res.status(400).json({
             success: false,
             message: 'The username should be a string'
         });
     }
-    if (!String(req.title)) {
+    if (!String(title)) {
         return res.status(400).json({
             success: false,
             message: 'Your question title should be a string',
         });
     }
-    if (!String(req.question)) {
+    if (!String(question)) {
         return res.status(400).json({
             success: false,
             message: 'Your question body should be a string',
         });
     }
-    if (!req.id || !req.username || !req.title || !req.question) {
+    if (!username || !title || !question) {
         return res.status(400).json({
             success: false,
             message: ' one of your fields is empty'
@@ -85,68 +51,22 @@ const validateQuestionInput = (req, res, next) => {
 };
 
 const validateUpvote = (req, res, next) => {
-    if (!req) {
+    const reqId = Number(req.params.id);
+    if (String(reqId)) {
         return res.status(400).json({
             success: false,
-            message: 'The request body should not be empty'
-        });
-    }
-    if (!Number(req.id)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The id has to be a number'
-        });
-    }
-    if (!String(req.question)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The question should be a string'
-        });
-    }
-    if (!Number(req.votes)) {
-        return res.status(400).json({
-            success: false,
-            message: 'Your votes should be a number',
-        });
-    }
-    if (!req.id || !req.title || !req.question || !req.votes) {
-        return res.status(400).json({
-            success: false,
-            message: ' one of your fields is empty'
+            message: 'The downvote id has to be a number'
         });
     }
     return next();
 };
 
 const validatedownvote = (req, res, next) => {
-    if (!req) {
-        return res.status(400).json({
-            success: false,
-            message: 'The request body should not be empty'
-        });
-    }
-    if (!Number(req.id)) {
+    const reqId = Number(req.params.id);
+    if (String(reqId)) {
         return res.status(400).json({
             success: false,
             message: 'The downvote id has to be a number'
-        });
-    }
-    if (!String(req.question)) {
-        return res.status(400).json({
-            success: false,
-            message: 'The question should be a string'
-        });
-    }
-    if (!Number(req.votes)) {
-        return res.status(400).json({
-            success: false,
-            message: 'Your votes should be a number',
-        });
-    }
-    if (!req.id || !req.title || !req.question || !req.votes) {
-        return res.status(400).json({
-            success: false,
-            message: ' one of your fields is empty'
         });
     }
     return next();

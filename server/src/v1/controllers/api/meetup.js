@@ -9,7 +9,7 @@ import AllMeetups from '../../models/meetupRecord';
  * @param  {{AllMeetups}}} data
  */
 const getMeetups = (req, res) => {
-    res.status(200).json({
+    return res.status(200).json({
         status: 200,
         success: true,
         data: {
@@ -27,7 +27,7 @@ const getMeetups = (req, res) => {
  * @param  {} }}
  */
 const getUpcoming = (req, res) => {
-    res.status(200).json({
+    return res.status(200).json({
         status: 200,
         success: true,
         data: {
@@ -47,29 +47,29 @@ const getUpcoming = (req, res) => {
  */
 const rsvp = (req, res) => {
     const reqId = req.params.id;
-    const result = AllMeetups.find(meetup => Number(meetup.id) === reqId);
+    const result = AllMeetups.find(meetup => meetup.id === Number(reqId));
 
-    if (result) {
-        const rsvpStatus = {
-            meetupId: result.meetupId,
-            topic: result.topic,
-            status: req.body.rsvp
-        };
-        AllMeetups.push(rsvpStatus);
-        res.status(201).json({
-            status: res.statusCode,
-            success: true,
-            message: 'Your rsvp status',
-            data: [rsvpStatus]
-        });
-    } else {
-        res.status(401).json({
+    if (!result) {
+        return res.status(401).json({
             status: 401,
             success: false,
             message: 'Unable to find meetup with this id'
         });
     }
+    const rsvpStatus = {
+        meetupId: result.meetupId,
+        topic: result.topic,
+        rsvp: req.body.rsvp
+    };
+    AllMeetups.push(rsvpStatus);
+    return res.status(201).json({
+        status: 201,
+        success: true,
+        message: 'Your rsvp status',
+        data: [rsvpStatus]
+    });
 };
+
 
 
 const meetup = {

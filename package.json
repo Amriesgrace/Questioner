@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./server/src/v1/lib/server.js",
     "lint": "eslint",
-    "test": "mocha --require @babel/register ./server/src/v1/tests/meetups.spec.js",
+    "test": "mocha --require @babel/register ./server/src/v1/tests/*",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {

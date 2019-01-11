@@ -6,9 +6,9 @@ import app from '../../../../app';
 const { expect } = chai;
 chai.use(chaiHttp);
 
-const attendingStatus = [];
 
 // test for endpoint to get all meetup records
+
 describe('/GET meetups', () => {
     // GET - List all meetups
     it('should return all meetups', (done) => {
@@ -20,15 +20,7 @@ describe('/GET meetups', () => {
                 done();
             });
     });
-    it('it should have a status 404 if meetup not available', (done) => {
-        chai.request(app)
-            .get('/api/v1/meetups')
-            .end((error, res) => {
-                expect(res).to.have.status(404);
-                done();
-            });
-            
-    });
+});
 
 // test for endpoint to get all upcoming meetups
 describe('/GET meetups/upcoming', () => {
@@ -46,22 +38,18 @@ describe('/GET meetups/upcoming', () => {
 
 // test for endpoint to post rsvp status
 describe('/POST RSVP status', () => {
-    // POST - rsvp status
     it('should post RSVP status for a specific meetup with id', (done) => {
         chai.request(app)
-            .post('/api/v1/meetups/:id/rsvp')
-            .send({ 
-                "meetupId": 10012,
-                "topic": 'dumbledores army',
-                "status": "yes",
+            .post('/api/v1/meetups/1/rsvp')
+            .send({
+                meetupId: 1011,
+                topic: 'dumbledores army',
+                rsvp: 'yes',
             })
             .end((err, res) => {
-                if (err) {
-                    throw err;
-                }
-                expect(res).to.have.status(201);
-                expect(res.body.success).to.equal('true');
-                expect(res.body).should.be.a('object');
+                expect(res.body.status).to.equal(201);
+                expect(res.body.success).to.equal(true);
+                expect(res.body).to.be.a('object');
                 done();
             });
     });
