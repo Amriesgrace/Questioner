@@ -21,10 +21,10 @@
                         </div>
                         <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
                         <ul class="navbar-collapse collapse" id="nav_menu">
-                            <li class="nav-list active">
+                            <li class="nav-list">
                                 <a href="index.html" class="nav-item">Home</a>
                             </li>
-                            <li class="nav-list">
+                            <li class="nav-list active">
                                 <a href="meetup.html" class="nav-item">Meetups</a>
                             </li>
                             <li class="nav-list">
@@ -51,39 +51,46 @@
         <main>
             <div class="container">
                 <div class="wrapper mt-5e">
-                    <div class="mb-2e">
-                        <h3 class="text-center f-38 l--8">Start a new Meetup</h3>
-                        <p class="brand-color text-center mt-1e f-24 light l--3">And meet new people</p>
+                    <div class="col-10 mx-auto">
+                        <div class="mb-2e">
+                            <h3 class="text-center f-38 l--8">Start a new Meetup</h3>
+                            <p class="brand-color text-center mt-1e f-24 light l--3">And meet new people</p>
+                        </div>
+                        <div class="mb-2e">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="What will the name of your meetup be?" required>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <label for="">Topic</label>
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="what will your meetup be about?" required>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <label for="">Location</label>
+                                    <br>
+                                    <input type="text" class="form-control" placeholder="where will your group be located" required>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <label for="">Images</label>
+                                    <br>
+                                    <input type="file" class="form-control" placeholder="upload an image for your group meetup" required>
+                                </div>
+                                <div class="form-group mt-5">
+                                    <label for="">Brief description</label>
+                                    <br>
+                                    <textarea class="form-control h-100 pt-1e" 
+                                        placeholder="describe who should join and what your meetup would do" required></textarea>
+                                </div>
+                                <div class="form-group mt-5 text-center">
+                                    <button class="btn btn-outline-brand mr-1">Submit</button>
+                                    <a href="dashboard.html" class="btn btn-outline-brand">dashboard</a>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="mb-2e">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="">Name</label>
-                                <br>
-                                <input type="text" class="form-control" placeholder="What will the name of your meetup be?" required>
-                            </div>
-                            <div class="form-group mt-5">
-                                <label for="">Topic</label>
-                                <br>
-                                <input type="text" class="form-control" placeholder="what will your meetup be about?" required>
-                            </div>
-                            <div class="form-group mt-5">
-                                <label for="">Location</label>
-                                <br>
-                                <input type="text" class="form-control" placeholder="where will your group be located" required>
-                            </div>
-                            <div class="form-group mt-5">
-                                <label for="">Brief description</label>
-                                <br>
-                                <textarea class="form-control h-100 pt-1e" 
-                                    placeholder="describe who should join and what your meetup would do" required></textarea>
-                            </div>
-                            <div class="form-group mt-5">
-                               <button class="btn btn-outline-brand">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    
                 </div>
                 
             </div>

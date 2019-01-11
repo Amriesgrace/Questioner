@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Questioner - Homepage</title>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
-        <!-- font awesome -->
+        <title>Questioner - Admin dashboard</title>
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"> 
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
@@ -30,18 +29,18 @@
                             </li>
                             <li class="nav-list">
                                 <div class="dropdown">
-                                    <button class="dropbtn">Log In
-                                        <i class="fa fa-caret-down"></i>
+                                    <button class="dropbtn">
+                                        <img src="assets/img/user-6.png" class="w-20" alt="">
+                                        <!-- <i class="fa fa-caret-down"></i> -->
                                     </button>
                                     <div class="dropdown-content">
-                                        <a href="login.html">Log In</a>
+                                        <a href="login.html">Log Out</a>
                                         <a href="register.html">Sign Up</a>
                                         <a href="profile.html">My Profile</a>
                                         
                                     </div>
                                 </div> 
                             </li>
-                            <!-- how to enter html tags onn different lines using emmet -->
                         </ul>
                     </div>
                 </nav>
@@ -51,19 +50,44 @@
 
         <!-- main -->
         <main class="main">
-            <div class="container">
-                <div class="wrapper mt-9e text-center">
-                    <h3 class="f-38 l--8 light">
-                        Welcome to <span class="brand-color">Questioner </span> <br> <br> An app that Crowd-source questions for a meetup. 
+            <div class="container mt-5e">
+                <div class="row width-100 dis-flex justify-center mt-5e">
+                    <div class="col-3">
+                        <a href="create_meetup.html" class="wrapper dis-block bd-grey card-box-container">
+                            <div class="card-box">
+                                <p class="brand-color f-24 light">Create New Meetup</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="delete_meetup.html" class="wrapper dis-block bd-grey card-box-container">
+                            <div class="card-box">
+                                <p class="brand-color f-24 light">Delete A Meetup</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div class="col-3">
                         
-                    </h3>
-                   <h2 class="mt-2e f-24 light mb-2e l--3"> <span class="brand-color">​Questioner​​</span>  helps the meetup organizers prioritize questions to be answered</h2>
-                   <div>
-                        <a href="register.html" class="btn login-btn mr-1"> <strong>Sign Up</strong> </a>
-                        <a href="login.html" class="btn login-btn"> <strong>Login</strong> </a>
-                   </div>
-                   
+                    </div>
+                    <div class="col-3">
+                        
+                    </div> -->
                 </div>
+                <!-- <div class=" mt-5e w-80p dis-flex justify-center">
+                    <div class="w-80p">
+                        <div class="mb-2e text-center">
+                            <p>All meetups</p>
+                             href="create_meetup.html" class="f-24">Create a new meetup</a> 
+                        </div>
+                        <a href="" class="wrapper">
+                            <div class="card">
+                                <p class="brand-color">Create New Meetups</p>
+                            </div>
+                        </a>
+                           
+                    </div>
+                    
+                </div> -->
                 
             </div>
         </main>
@@ -72,11 +96,10 @@
         <!-- footer -->
         <footer class="footer mt-5e">
             <div class="container">
-                <p class="text-center light">2018 Andela bootcamp developer challenge  cycle 40 </p>
+                <p class="text-center light">2018 Andela bootcamp developer challenge cycle 40 </p>
             </div>
         </footer>
         <!-- ./footer -->
-
         <script src="assets/js/main.js"></script>
         <script>
             app.navbarToggler();

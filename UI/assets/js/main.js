@@ -76,8 +76,35 @@ const app ={
         cancelBtn.addEventListener('click', activateCloseModal);
         window.addEventListener('click', modalBackdrop);
         closeModal.addEventListener('click', altCloseModal);
-        // deleteProductBtn.addEventListener('click', confirmAction);
+    },
+
+    initDeleteMeetupConfirmationModal: () => {
+        const modal = document.getElementById('delete_modal');
+        const startDeleteModal = document.getElementById('delete_meetup');
+        const cancelBtn = document.getElementById('cancel_btn');
+        const closeModal = document.getElementById('close');
+
+        const activateDeleteModal = (ev) => {
+            modal.style.display = 'block';
+        }
+        const activateCloseModal = (ev) => {
+            modal.style.display = 'none';
+        };
+        const modalBackdrop = (ev) => {
+        if (ev.target == modal) {
+            modal.style.display = 'none';
+        }
+        };
+        const altCloseModal = () => {
+            modal.style.display= 'none';
+        }
+        startDeleteModal.addEventListener('click', activateDeleteModal);
+        cancelBtn.addEventListener('click', activateCloseModal);
+        window.addEventListener('click', modalBackdrop);
+        closeModal.addEventListener('click', altCloseModal);
+  
     }
+
     
 }
 
