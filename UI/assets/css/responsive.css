@@ -10,12 +10,24 @@
     .navbar-toggler{
         margin-left: 3em;
     }
+    .navbar-collapse{
+        justify-content: flex-start;
+    }
+    .nav-list{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #78d6be;
+        padding: 0.7em;
+        margin-top: 15px;
+    }
     .mt-9e{ margin-top: 5em; }
     .activities.dis-flex, .wrapper.dis-flex{
         display: block;
     }
+    .row{ display: block; }
     .col-1, .col-3{
         width: 100%;
+        flex: none;
     }
     .rounded>img{
         display: none;
@@ -23,8 +35,9 @@
     .col-10, .col-8{
         width: 100%;
     }
-    .col-9, .col-2{
+    .col-9, .col-2, .col-4{
         width: 100%;
+        flex: none;
     }
     .col-2{ margin-top: 20px; }
     .heading >.col-1{
@@ -37,6 +50,18 @@
     #question_btn{
         margin-top: 2em;
     }
+    .bd-r-light{
+        border-right: none ;
+        border-bottom: 1px solid rgba(71,71,71,.88);
+    }
+    .form-container{
+        width: 290px;
+    }
+    .login-form{
+        padding: 2em 1em 3em 1em;
+    }
+    .activity-container{ margin-toop: 2em; }
+    #login_btn{ margin: auto; }
     .question-section{
         justify-content: center;
     }
@@ -48,8 +73,16 @@
     .downvote-btn{
         margin-left: 0;
     }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+    }
     .l--8{ line-height: 1.2; }
     .l--3{ line-height: 1.3; }
+    .rsvp{ text-align: center; padding-bottom: 1em;}
 }
 
 @media (max-width: 320px) {
@@ -63,9 +96,22 @@
         display: block;
         width: 100%;
         border-bottom: 1px solid #99d3c4;
+        padding: 0.7em;
+        margin-top: 15px;
     }
     .container{
         margin: 0 1em;
+    }
+    .form-container{
+        width: 260px;
+    }
+    .login-form{
+        padding: 2em 1em 3em 1em;
+    }
+    #login_btn, #signup_btn{ margin: auto; }
+    .btn{
+        display: block; 
+        margin: 1em auto;
     }
     .mt-9e{
         margin-top: 5em;
@@ -73,17 +119,23 @@
     .activities.dis-flex, .wrapper.dis-flex{
         display: block;
     }
+    .row{
+        display: block;
+    }
     .col-1, .col-3{
         width: 100%;
+        flex: none;
     }
     .rounded>img{
         display: none;
     }
     .col-10, .col-8{
         width: 100%;
+        flex: none;
     }
-    .col-9, .col-2{
+    .col-9, .col-2, .col-4{
         width: 100%;
+        flex: none;
     }
     .col-2{ margin-top: 20px; }
     .heading >.col-1{
@@ -93,6 +145,18 @@
         padding-left: 1em;
         padding-right: 1em;
     }
+    .rsvp{ 
+        padding: 0 12px;
+        text-align: center;
+    }
+    .rsvp h3 span{
+        display: block;
+    }
+    .bd-r-light{
+        border-right: none ;
+        border-bottom: 1px solid rgba(71,71,71,.88);
+    }
+    .activity-container{ margin-top: 2em; }
     #question_btn{
         margin-top: 2em;
     }
@@ -107,12 +171,17 @@
     .downvote-btn{
         margin-left: 0;
     }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 250px;
+    }
     .l--8{ line-height: 1.2; }
     .l--3{ line-height: 1.3; }
 
 }
-
-
 
 
 @media (min-width: 425px) { 
@@ -122,7 +191,7 @@
     .nav-list{
         display: block;
         width: 100%;
-        border-bottom: 1px solid #99d3c4;
+        border-bottom: 1px solid #78d6be;
     }
     .navbar-toggler{
         margin-left: 8em;
@@ -131,12 +200,18 @@
     .wrapper.dis-flex{
         display: block;
     }
+    .row{ display: block; }
     .col-3{
-        display: flex;
+        /* display: flex; */
+        width: 100%;
+        flex: none;
+    }
+    .col-1{
         width: 100%;
     }
-    .col-8{
+    .col-8, .col-4{
         width: 100%;
+        flex: none;
     }
     .l--8{ line-height: 1.0; }
     .l--3{ line-height: 1.3; }
@@ -146,7 +221,7 @@
     .col-9, .col-2{
         width: 100%;
     }
-    .col-2{ margin-top: 20px; }
+    
     .heading >.col-1{
         display: none
     }
@@ -160,6 +235,10 @@
     .question-section{
         justify-content: center;
     }
+    .bd-r-light{
+        border-right: none ;
+        border-bottom: 1px solid rgba(71,71,71,.88);
+    }
     .vote > a{
         display: block;
         margin-bottom: 10px;
@@ -168,11 +247,26 @@
     .downvote-btn{
         margin-left: 0;
     }
+    .form-container{
+        width: 340px;
+    }
+    .login-form{
+        padding: 2em 1em 3em 1em;
+    }
+    #login_btn, #signup_btn{ margin: auto; }
+    .rsvp{ text-align: center; padding-bottom: 1em; }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 350px;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 899px) { 
 
- }
+}
 
 @media (min-width: 768px) { 
     .navbar-toggler{
@@ -187,9 +281,7 @@
         width: inherit;
         border: none;
     }
-    .img-card > img{
-        right: 35%;
-    }
+    .row{ display: flex; }
     .mt-9e{ margin-top: 5em; }
     .pr-2e{ padding-right: 1em; }
     .col-1{ width: 15%; }
@@ -200,15 +292,33 @@
         width: 75%;
     }
     .col-2{ 
-        margin-top: 20px; 
         width: 20%;
+    }
+    .col-3{ 
+        width: 30%;
+    }
+    .col-8{
+        width: 60%;
+        flex: 0 0 60%;
+    }
+    .col-4{
+        width: 33.3%;
+        flex: 0 0 33.3%;
     }
     .px-3e{
         padding-left: 1em;
         padding-right: 1em;
     }
+    .activity-container{ margin-top: 0; }
     #question_btn{
         margin-top: 0;
+    }
+    .card-footer p{
+        font-size: 14px;
+    }
+    .col-4{
+        width: 33.3%;
+        flex: 0 0 33.3%;
     }
     .question-section{
         justify-content: space-between;
@@ -217,21 +327,29 @@
         display: inline-flex;
         margin-bottom: 10px;
         width: 150px;
+        justify-content: center;
+        align-items: center;
     }
     .downvote-btn{
         margin-left: 0;
     }
+    .bd-r-light{
+        border-right:  1px solid rgba(71,71,71,.88);
+        border-bottom:none ;
+    }
+    .form-container{
+        width: 500px;
+    }
+    .login-form{
+        padding: 2em 1em 3em 1em;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 3% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 600px;
+    }
+    #login_btn{ margin: auto; }
     
 }
-
-
-@media (min-width: 900px) and (max-width: 1199px) { @content; }
-
-
-@media (min-width: 1200px) { @content; }
-
-@media (min-width: 1200px) and (max-width: 1799px) { @content; }
-
-
-@media (min-width: 1800px) { @content; }
-

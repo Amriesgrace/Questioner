@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Questioner - Admin dashboard</title>
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <nav class="">
+                    <div class="navbar" id="navbar">
+                        <div class="logo-container">
+                            <a href="index.html" class="logo"><h4 class="brand-color">Questioner</h4></a>
+                        </div>
+                        <button class="navbar-toggler" id="navbar_toggler"><i class="fa fa-bars fa-2x"></i> </button>
+                        <ul class="navbar-collapse collapse" id="nav_menu">
+                            <li class="nav-list active">
+                                <a href="index.html" class="nav-item">Home</a>
+                            </li>
+                            <li class="nav-list">
+                                <a href="meetup.html" class="nav-item">Meetups</a>
+                            </li>
+                            <li class="nav-list">
+                                <div class="dropdown">
+                                    <button class="dropbtn">
+                                        <img src="assets/img/user-6.png" class="w-20" alt="">
+                                        <!-- <i class="fa fa-caret-down"></i> -->
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="login.html">Log Out</a>
+                                        <a href="register.html">Sign Up</a>
+                                        <a href="profile.html">My Profile</a>
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ./ header -->
+
+        <!-- main -->
+        <main class="main">
+            <div class="container mt-5e">
+                <div class="row width-100 dis-flex justify-center mt-5e">
+                    <div class="col-3">
+                        <a href="create_meetup.html" class="wrapper dis-block bd-grey card-box-container">
+                            <div class="card-box">
+                                <p class="brand-color f-24 light">Create New Meetup</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="delete_meetup.html" class="wrapper dis-block bd-grey card-box-container">
+                            <div class="card-box">
+                                <p class="brand-color f-24 light">Delete A Meetup</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div class="col-3">
+                        
+                    </div>
+                    <div class="col-3">
+                        
+                    </div> -->
+                </div>
+                <!-- <div class=" mt-5e w-80p dis-flex justify-center">
+                    <div class="w-80p">
+                        <div class="mb-2e text-center">
+                            <p>All meetups</p>
+                             href="create_meetup.html" class="f-24">Create a new meetup</a> 
+                        </div>
+                        <a href="" class="wrapper">
+                            <div class="card">
+                                <p class="brand-color">Create New Meetups</p>
+                            </div>
+                        </a>
+                           
+                    </div>
+                    
+                </div> -->
+                
+            </div>
+        </main>
+        <!-- ./main -->
+
+        <!-- footer -->
+        <footer class="footer mt-5e">
+            <div class="container">
+                <p class="text-center light">2018 Andela bootcamp developer challenge cycle 40 </p>
+            </div>
+        </footer>
+        <!-- ./footer -->
+        <script src="assets/js/main.js"></script>
+        <script>
+            app.navbarToggler();
+        </script>
+        
+    </body>
+</html>
