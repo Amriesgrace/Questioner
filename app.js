@@ -9,6 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 app.use('/', Routes);
 
 // send 404 error to error handler

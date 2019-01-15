@@ -2,61 +2,61 @@ const meetupRecord = [
     {
         id: 1,
         meetupId: 1011,
-        createdOn: 1545733221973,
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: 1545733221973,
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
         id: 2,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
         id: 3,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
         id: 4,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
         id: 5,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     },
     {
         id: 6,
         meetupId: 1011,
-        createdOn: '12/01/2019',
+        createdOn: new Date(),
         location: 'lagos',
         imageUrl: 'placeholder/image.com',
         topic: 'Gryffindor meetup',
-        happeningOn: '12/01/2019',
+        happeningOn: new Date(),
         tags: ['house gryffindor', 'dumbledore army']
     }
 ];

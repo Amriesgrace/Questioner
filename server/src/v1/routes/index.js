@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
     res.send('Welcome to questioner.Register to get started');
 });
 
-
 // get all meetups
 router.get('/api/v1/meetups', Meetups.getMeetups);
 
@@ -21,21 +20,17 @@ router.get('/api/v1/meetups/upcoming', Meetups.getUpcoming);
 // get a specific meetup
 router.get('/api/v1/meetups/:id', Meetups.getMeetup);
 
+// create a question
+router.post('/api/v1/question', Validate.validateQuestionInput, Questions.createQuestion);
+
 // rsvp to a meetup
 router.post('/api/v1/meetups/:id/rsvp', Meetups.rsvp);
-
-// create a meetups
-router.post('/api/v1/meetups', Meetups.createMeetup);
-
-// create a question
-router.post('/api/v1/question', Questions.createQuestion);
 
 // upvote a question
 router.patch('/api/v1/question/:id/upvote', Questions.upvote);
 
 // downvote a question
 router.patch('/api/v1/question/:id/downvote', Questions.downvote);
-
 
 
 

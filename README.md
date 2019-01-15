@@ -5,17 +5,33 @@ A Full stack application that Crowd-source questions for a meetup. ​Questioner
 [![Coverage Status](https://coveralls.io/repos/github/Amriesgrace/Questioner/badge.svg?branch=develop)](https://coveralls.io/github/Amriesgrace/Questioner?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/65a5d1bc5418da3c6933/maintainability)](https://codeclimate.com/github/Amriesgrace/Questioner/maintainability)
 
-### Github Page
+## Github Pagess
 [Homepage](https://amriesgrace.github.io/Questioner/UI/index.html)
 
-#### To see Questioner running go [here] (https://questioner-1.herokuapp.com/)
+## Server Side hosted on heroku
+[here] (http://new-questioner.herokuapp.com/)
+
+# Getting Started
+
+### Prequisities
+
+1. Postman
+2. Web Browser
+
+### To get this API working on your local browser
+1. Node JS
+2.Text Editor
 
 ### To Install 
 1. Clone this repository
+``` git clone  ```
 2. Run npm install to install dependencies
-3. Cd into the cloned and start the application by running npm start 
+``` npm install ```
+3. Cd into the cloned repo and start the application by running npm start 
+``` npm start ```
 4. Install postman to test all endpoints on port 8000
 5. To test, run npm test
+``` npm test```
 
 ### Available API routes
 - API routes to create a new meetup
@@ -42,3 +58,12 @@ A Full stack application that Crowd-source questions for a meetup. ​Questioner
 
 - API route to rsvp to a meetup
   * GET : ```/api/v1/meetups/:id/rsvp```
+
+## Author 
+Grace Chiamaka
+
+## License 
+MIT
+
+## Acknowledgements
+Andela cycle 40
