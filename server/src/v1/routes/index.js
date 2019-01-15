@@ -1,7 +1,7 @@
 import express from 'express';
-import Meetups from '../controllers/api/meetup';
-import Questions from '../controllers/api/question';
-import Validate from '../middleware/validation';
+import Meetups from '../controllers/meetup';
+import Questions from '../controllers/question';
+// import Validation from '../middleware/Validation';
 
 const router = express.Router();
 
@@ -17,18 +17,20 @@ router.get('/api/v1/meetups', Meetups.getMeetups);
 // get upcoming meetups
 router.get('/api/v1/meetups/upcoming', Meetups.getUpcoming);
 
-// rsvp to a meetup
-router.post('/api/v1/meetups/:id/rsvp', Meetups.rsvp);
+// get a specific meetup
+router.get('/api/v1/meetups/:id', Meetups.getMeetup);
 
 // create a question
 router.post('/api/v1/question', Validate.validateQuestionInput, Questions.createQuestion);
+
+// rsvp to a meetup
+router.post('/api/v1/meetups/:id/rsvp', Meetups.rsvp);
 
 // upvote a question
 router.patch('/api/v1/question/:id/upvote', Questions.upvote);
 
 // downvote a question
 router.patch('/api/v1/question/:id/downvote', Questions.downvote);
-
 
 
 
