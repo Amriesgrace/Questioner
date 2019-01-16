@@ -147,15 +147,11 @@ const dropusers = () => {
     });
 };
 
-// createDatabaseQuestioner();
-// createMeetupsTable();
-// createQuestionsTable();
+createDatabaseQuestioner();
+createMeetupsTable();
+createQuestionsTable();
 createUsersTable();
-// rsvpTable();
-// deleteMeetupTable();
-// deleteQuestionsTable();
-// dropusers();
-// droprsvp();
+rsvpTable();
 
 
 
