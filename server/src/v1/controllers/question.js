@@ -1,4 +1,17 @@
+import { Client } from 'pg';
+import dotenv from 'dotenv';
 
+dotenv.config();
+
+const client = new Client({
+    connectionString: process.env.DATABASE_URL
+});
+client.connect((err) => {
+    if (err) {
+        console.error('connection error ', err.stack);
+    }
+    console.log('connected to db');
+});
 
 const createQuestion = (req, res) => {
     const sqlQueryString = `INSERT INTO questions (created_on, created_by, meetup_id, title, question_body, votes)

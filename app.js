@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 
 import Routes from './server/src/v1/routes/index';
 
-
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));

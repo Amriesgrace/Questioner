@@ -35,13 +35,12 @@ const createMeetupsTable = () => {
     const queryString = `
         CREATE TABLE meetups (
             id serial PRIMARY KEY,
-            title character varying(50),
-            location text,
-            created_on date,
-            topic text,
+            location text NOT NULL,
+            createdOn DATE NOT NULL default CURRENT_DATE,
+            topic text NOT NULL,
             images text,
             tags text,
-            happening_on date
+            happeningOn DATE NOT NULL
         )`;
     client.query(queryString, (err, res) => {
         if (err) {
@@ -54,11 +53,11 @@ const createQuestionsTable = () => {
     const queryString = `
         CREATE TABLE questions (
             id serial PRIMARY KEY, 
-            created_on date,
-            created_by int,
-            meetup_id int,
+            createdOn date NOT NULL default CURRENT_date,
+            createdBy int,
+            meetupId int,
             title character varying(50),
-            question_body text NOT NULL,
+            questionBody text NOT NULL,
             votes int
         )`;
     client.query(queryString, (err, res) => {
@@ -73,14 +72,15 @@ const createUsersTable = () => {
     const queryString = `
         CREATE TABLE users(
             id serial PRIMARY KEY,
-            first_name character varying(50),
-            last_name character varying(50),
-            other_name character varying(50),
-            email text,
-            phone_number int,
-            user_name character varying(50),
-            registered date,
-            is_admin boolean
+            firstName character varying(50) NOT NULL,
+            lastName character varying(50) NOT NULL,
+            otherName character varying(50),
+            email varchar(320) NOT NULL,
+            phoneNumber varchar(11) NOT NULL,
+            password varchar(60) NOT NULL,
+            username varchar(10) NOT NULL,
+            registered date NOT NULL default current_date,
+            isAdmin boolean
         )
     `;
     client.query(queryString, (err, res) => {
@@ -94,9 +94,9 @@ const rsvpTable = () => {
     const queryString = `
         CREATE TABLE rsvp(
             id serial PRIMARY KEY, 
-            meetup_id INTEGER NOT NULL REFERENCES meetups, 
-            user_id INTEGER NOT NULL REFERENCES users, 
-            response character varying(20)
+            meetupId INTEGER NOT NULL REFERENCES meetups, 
+            userId INTEGER NOT NULL REFERENCES users, 
+            response character varying(20) NOT NULL
         )`;
     client.query(queryString, (err, res) => {
         if (err) {
@@ -121,9 +121,29 @@ const deleteQuestionsTable = () => {
     const queryString = 'DROP TABLE meetups';
     client.query(queryString, (err, res) => {
         if (err) {
-            client.end();
-            console.log(res, 'questions table deleted');
+            throw err;
         }
+        console.log(res, 'questions table deleted');
+    });
+};
+const droprsvp = () => {
+    const queryString = 'DROP TABLE rsvp';
+    client.query(queryString, (err, res) => {
+        if (err) {
+            throw err;
+        }
+        console.log(res, 'rsvp table deleted');
+    });
+};
+
+const dropusers = () => {
+    const queryString = 'DROP TABLE users';
+    client.query(queryString, (err, res) => {
+        if (err) {
+            throw err;
+        }
+        client.end();
+        console.log(res, 'users table deleted');
     });
 };
 
@@ -132,8 +152,7 @@ createMeetupsTable();
 createQuestionsTable();
 createUsersTable();
 rsvpTable();
-deleteMeetupTable();
-deleteQuestionsTable();
+
 
 
 export default client;

@@ -22,12 +22,10 @@ client.connect((err) => {
  * @param  {object} res
  */
 const createMeetup = (req, res) => {
-    const sqlQueryString = `INSERT INTO meetups (title, location, created_on, topic, images, tags, happening_on)
-                            VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`;
+    const sqlQueryString = `INSERT INTO meetups (location, topic, images, tags, happeningon)
+                            VALUES ($1, $2, $3, $4, $5) RETURNING *`;
     const values = [
-        req.body.title,
         req.body.location,
-        req.body.createdOn,
         req.body.topic,
         req.body.images,
         req.body.tags,
@@ -37,12 +35,11 @@ const createMeetup = (req, res) => {
         if (error) {
             return res.status(400).json({
                 status: 400,
-                message: 'unable to create meetup'
+                message: error.message
             });
         }
         return res.status(201).json({
             status: 201,
-            success: true,
             data: result.rows
         });
     });
@@ -61,13 +58,11 @@ const getMeetups = (req, res) => {
         if (response.rowCount === 0) {
             return res.status(404).json({
                 status: 404,
-                success: false,
                 message: 'You have no meetups'
             });
         }
         return res.status(200).json({
             status: 200,
-            success: true,
             data: [response.rows]
         });
     });
@@ -85,7 +80,6 @@ const getMeetup = (req, res) => {
         if (result.rowCount === 0) {
             return res.status(404).json({
                 status: 404,
-                success: false,
                 message: 'There are no meetups with this id'
             });
         }
@@ -107,7 +101,7 @@ const getMeetup = (req, res) => {
  *
  */
 const getUpcoming = (req, res) => {
-    const sqlQueryString = 'SELECT * FROM meetups where happening_on >= NOW()';
+    const sqlQueryString = 'SELECT * FROM meetups where happeningon >= NOW()';
     client.query(sqlQueryString, (err, response) => {
         if (response.rowCount === 0) {
             return res.status(404).json({
@@ -141,15 +135,15 @@ const rsvp = (req, res) => {
             data: response.rows
         });
         const newdata = {
-            topic: response.rows[0].title,
+            topic: response.rows[0].topic,
         };
         const values = [
             newdata.topic,
             req.body.rsvp
         ];
         console.log(newdata);
-        client.query(sqlQueryString, values, (err, result) => {
-            if (err) {
+        client.query(sqlQueryString, values, (error, result) => {
+            if (error) {
                 return res.status(400).json({
                     status: 400,
                     message: 'Unable to add status'
@@ -158,7 +152,7 @@ const rsvp = (req, res) => {
             return res.status(201).json({
                 status: res.statusCode,
                 message: 'Status added',
-                data: [ newdata.meetupId, result.rows]
+                data: [newdata.meetupId, result.rows]
             });
         });
     });
